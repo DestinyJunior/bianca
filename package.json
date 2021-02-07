@@ -1,6 +1,6 @@
 {
   "name": "bianca",
-  "version": "1.0.2",
+  "version": "0.0.2",
   "type": "module",
   "description": "nodejs starter kit for quickly scalfolding nodejs app",
   "main": "server.js",
@@ -8,6 +8,8 @@
     "prod": "NODE_ENV=production node server",
     "start": "node server",
     "dev": "nodemon server",
+    "secret": "node secret",
+    "client": "cd client && yarn dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["nodejs", "vuejs", "vite"],

@@ -34,7 +34,7 @@ app.use(cookieParser());
 
 // import routes files
 import apiRoutes from "./routes/api/index.js";
-// const webRoutes = require('./routes/web/index');
+const webRoutes = import("./routes/web/index.js");
 
 //development mode middle ware logger
 if (process.env.NODE_ENV === "development") {
@@ -87,14 +87,14 @@ app.use(cors());
 app.use("/api/v1/", apiRoutes);
 // app.use('/', webRoutes);
 
-// app.use(express.static(path.join(__dirname, 'storage')));
+app.use(express.static(path.join(__dirname, "storage")));
 
 if (process.env.FRONTEND_SERVE === "allow") {
   // handle static files for vue
   app.use(express.static(__dirname + "/public"));
 
-  // Handle Redirect
-  app.get(/.*/, (req, res) => {
+  // Handle Redirect to WebRoutes
+  app.use(/.*/, (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
   });
 }
