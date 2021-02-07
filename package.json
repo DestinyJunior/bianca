@@ -1,15 +1,16 @@
 {
-  "name": "nodejs-starter-kit",
+  "name": "bianca",
   "version": "1.0.2",
   "type": "module",
   "description": "nodejs starter kit for quickly scalfolding nodejs app",
   "main": "server.js",
   "scripts": {
-    "start": "NODE_ENV=production node server",
+    "prod": "NODE_ENV=production node server",
+    "start": "node server",
     "dev": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["nodejs", "vuejs", "vite"],
   "author": "Sunday Destiny",
   "license": "ISC",
   "dependencies": {
